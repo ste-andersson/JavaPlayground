@@ -5,10 +5,10 @@ public class Main {
         System.out.println("=== KAPITEL 1: LOGIK ===");
 
         // Vi anropar metoder i LogicOps-klassen genom att skriva: Klassnamn.Metodnamn()
-        int pris = LogicOps.getTicketPrice(70);
-        System.out.println("Biljettpris: " + pris);
+        int price = LogicOps.getTicketPrice(70);
+        System.out.println("Biljettpris: " + price);
 
-        String vader = LogicOps.kollaVader(25);
+        String vader = LogicOps.checkWeather(25);
         System.out.println("Väder: " + vader);
 
 

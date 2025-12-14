@@ -12,7 +12,7 @@ public class LogicOps {
     }
 
     // Metod för väder (Strängar och logik)
-    public static String kollaVader(int temp) {
+    public static String checkWeather(int temp) {
         if (temp < 0) {
             return "Kallt";
         } else if (temp >= 20) {
