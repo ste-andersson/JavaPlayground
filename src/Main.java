@@ -15,16 +15,6 @@ public class Main {
            String firstWord = message;
            System.out.println(firstWord);
         }
-        //Count occurances of a letter
-        char letter = 'a';
-        int count = 0;
-        for (int i = 0; i < message.length(); i++) {
-            char letterChecked = message.charAt(i);
-            if (letterChecked == letter || letterChecked == Character.toUpperCase(letter)) {
-                count++;
-            }
-        }
-        System.out.println("Det finns " + count + " stycken " + letter + " i texten.");
         //Count occurances of a letter using a method
         System.out.println("Antal a: " + countLetter(message, 'a'));
         System.out.println("Antal l: " + countLetter(message, 'l'));
@@ -32,6 +22,9 @@ public class Main {
         int[] myNumbers = {1, 2, 3, 4, 5, 6, 10};
         int evenSum = sumEvens(myNumbers);
         System.out.println("Summan av alla jämna tal är: " + evenSum);
+        //Find the lowest number in an array
+        int[] numbers = {15, 42, 7, 99, 3};
+        System.out.println("Minsta talet: " + findMin(numbers));
     }
 
     public static int countLetter(String text, char letterToFind) {
@@ -54,5 +47,16 @@ public class Main {
             }
         }
         return sum;
+    }
+
+    public static int findMin(int[] arr) {
+        int lowestNumber = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            int currentNumber = arr[i];
+            if (lowestNumber > currentNumber) {
+                lowestNumber = currentNumber;
+            }
+        }
+        return lowestNumber;
     }
 }
