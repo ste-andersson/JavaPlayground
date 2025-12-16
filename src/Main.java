@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args){
-        //print a string message
+
         String message = "Hallå där!";
         System.out.println(message);
         //print the same thing but upper case
