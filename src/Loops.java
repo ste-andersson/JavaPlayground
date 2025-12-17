@@ -1,3 +1,5 @@
+// Här är en lös kommentar
+
 public class Loops {
     public static void main(String[] args) {
         System.out.println("The duplicate is:");
