@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Text block för menyn
         String welcomeMessage = """
                 ================================
                 |   STEFAN'S JAVA PLAYGROUND   |
@@ -34,7 +33,7 @@ public class Main {
             case "2" -> {
                 System.out.print("Enter text: ");
                 String text = scanner.nextLine();
-                char searchLetter = '0';
+                char searchLetter;
                 while (true) {
                     System.out.print("Enter a letter: ");
                     String inputLetter = scanner.nextLine();
