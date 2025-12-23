@@ -18,7 +18,7 @@ class CollectionsPracticeTest {
         expected.add(13);
         expected.add(19);
 
-        ArrayList<Integer> actual = new ArrayList<>(CollectionsPractice.filterOddNumbers(unfilteredList));
+        ArrayList<Integer> actual = CollectionsPractice.filterOddNumbers(unfilteredList);
 
         assertEquals(expected, actual);
 
