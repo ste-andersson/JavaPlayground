@@ -43,6 +43,12 @@ public class LiveCoding {
         //Print it out
         System.out.println(wordToCompress + " = " + compressWord(wordToCompress));
 
+        //Add words for isAnagram test
+        String anagramWord1 = "leg";
+        String anagramWord2 = "gel";
+
+        System.out.println(anagramWord1 + " and " + anagramWord2 + " anagram test: " + isAnagram(anagramWord1, anagramWord2));
+
 
     }
 
@@ -125,6 +131,17 @@ public class LiveCoding {
         }
         letterCount++;
         result = result + inputWord.charAt(inputWord.length() - 1) + letterCount;
+        return result;
+    }
+
+    public static boolean isAnagram(String input1, String input2) {
+        input1 = input1.toLowerCase();
+        input2 = input2.toLowerCase();
+        char[] input1Array = input1.toCharArray();
+        char[] input2Array = input2.toCharArray();
+        Arrays.sort(input1Array);
+        Arrays.sort(input2Array);
+        boolean result = Arrays.equals(input1Array, input2Array);
         return result;
     }
 
