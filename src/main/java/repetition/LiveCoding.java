@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class LiveCoding {
 
     public static void main(String[] args) {
-        //Add values for FizzBuzz-test
+        //Add values for FizzBuzz test
         int testRange = 40;
         int testDivider1 = 3;
         int testDivider2 = 4;
@@ -20,10 +20,12 @@ public class LiveCoding {
             System.out.println(testResult[i-1]);
         }
 
+        // Add words for palindrome test
         String testWordTrue = "apa";
         String testWordFalse = "apan";
 
-        System.out.println(isPalindrome(testWordFalse));
+        System.out.println("Palindrome test for \"" + testWordFalse + "\": " + isPalindrome(testWordFalse));
+        System.out.println("Palindrome test for \"" + testWordTrue + "\": " + isPalindrome(testWordTrue));
 
         int[] inputNumbers = {5, 6, 7, 1, 10, 55};
 
@@ -34,6 +36,12 @@ public class LiveCoding {
         int[] arrayForMerging2 = {2, 3, 4, 11, 17, 18, 19, 25, 26};
 
         System.out.println(Arrays.toString(mergeArrays(arrayForMerging1, arrayForMerging2)));
+
+        //Set test word for compressWord
+        String wordToCompress = "aaawwwwdfffsggggg";
+
+        //Print it out
+        System.out.println(wordToCompress + " = " + compressWord(wordToCompress));
 
 
     }
@@ -100,6 +108,23 @@ public class LiveCoding {
             result[resultIndex] = inputLonger[i];
             resultIndex++;
         }
+        return result;
+    }
+
+    public static String compressWord(String inputWord) {
+        int letterCount = 0;
+        String result = "";
+        for (int i = 0; i < inputWord.length() - 1; i++) {
+            if (inputWord.charAt(i) == inputWord.charAt(i+1)) {
+                letterCount++;
+            } else {
+                letterCount++;
+                result = result + inputWord.charAt(i) + letterCount;
+                letterCount = 0;
+            }
+        }
+        letterCount++;
+        result = result + inputWord.charAt(inputWord.length() - 1) + letterCount;
         return result;
     }
 
