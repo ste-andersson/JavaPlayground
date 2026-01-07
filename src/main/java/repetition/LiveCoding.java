@@ -49,6 +49,10 @@ public class LiveCoding {
 
         System.out.println(anagramWord1 + " and " + anagramWord2 + " anagram test: " + isAnagram(anagramWord1, anagramWord2));
 
+        //Get a name from an email address
+        String myEmail = "stefan.andersson@sveki.se";
+        System.out.println("The name in " + myEmail + " is " + nameFromEmail(myEmail));
+
 
     }
 
@@ -143,6 +147,15 @@ public class LiveCoding {
         Arrays.sort(input2Array);
         boolean result = Arrays.equals(input1Array, input2Array);
         return result;
+    }
+
+    public static String nameFromEmail(String email){
+        int firstNameLength = email.indexOf(".") - 1;
+        String firstName = email.substring(0, email.indexOf("."));
+        String lastName = email.substring(email.indexOf(".") + 1 ,email.indexOf("@"));
+        String capitalizedFirstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
+        String capitalizedLastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        return capitalizedFirstName + " " + capitalizedLastName;
     }
 
 
