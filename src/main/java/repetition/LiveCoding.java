@@ -150,7 +150,6 @@ public class LiveCoding {
     }
 
     public static String nameFromEmail(String email){
-        int firstNameLength = email.indexOf(".") - 1;
         String firstName = email.substring(0, email.indexOf("."));
         String lastName = email.substring(email.indexOf(".") + 1 ,email.indexOf("@"));
         String capitalizedFirstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
